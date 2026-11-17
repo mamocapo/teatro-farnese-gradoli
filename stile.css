@@ -178,6 +178,23 @@ section.blocco { padding: 104px 0; }
 .tuo-posto .didascalia strong { font-family: var(--serif); font-weight: 500; font-size: 28px; color: var(--oro-chiaro); }
 .tuo-posto .didascalia span { font-size: 14px; opacity: .9; }
 
+/* Posti già presi (biglietti venduti e abbonati): spenti, non si toccano */
+.tuo-posto .posto.occupato,
+.legenda .posto.occupato { background: rgba(247, 239, 221, 0.22); box-shadow: none; cursor: not-allowed; }
+.tuo-posto .posto.occupato:hover { box-shadow: none; }
+
+.legenda { list-style: none; margin: 20px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; opacity: .9; }
+.legenda li { display: flex; align-items: center; gap: 8px; }
+.legenda .posto { width: 12px; flex: none; }
+.legenda .posto.scelto { background: var(--oro-chiaro); box-shadow: none; }
+
+/* La sala dei biglietti, dentro il riquadro "Biglietti" di ogni spettacolo */
+.scegli-biglietto { padding: 28px; margin-bottom: 24px; }
+.scegli-biglietto .etichetta { color: var(--oro-chiaro); margin-bottom: 18px; }
+.scegli-biglietto .posti { gap: 6px; }
+.scegli-biglietto .didascalia { margin-top: 20px; }
+.scegli-biglietto .didascalia strong { font-size: 24px; line-height: 1.2; }
+
 /* ===== Il teatro + Dove ===== */
 .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
 .due-colonne h2 { margin: 0 0 16px; font-family: var(--serif); font-weight: 500; font-size: 40px; color: var(--blu); }
@@ -303,6 +320,11 @@ dl.info dd { margin: 0; }
   .biglietto { position: static; padding: 26px; }
   .biglietto dl.info { grid-template-columns: 1fr; gap: 2px; }
   .biglietto dl.info dd { margin-bottom: 14px; }
+  /* sul telefono la sala dei biglietti prende tutta la larghezza, per avere posti più grandi da toccare */
+  .biglietto .scegli-biglietto { margin-left: -26px; margin-right: -26px; border-radius: 0; padding: 24px 14px; }
+  .scegli-biglietto .posti { gap: 4px; }
+  .tuo-posto { padding: 24px 16px; }
+  .tuo-posto .posti { gap: 4px; }
   .altri .contenitore { grid-template-columns: 1fr; }
   .altri a + a { text-align: left; align-items: flex-start; border-left: 0; border-top: 1px solid var(--filo); padding-left: 0; }
   .altri strong { font-size: 24px; }

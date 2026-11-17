@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="stile.css?v=1">
+<link rel="stylesheet" href="stile.css?v=2">
 </head>
 <body>
 
@@ -72,8 +72,22 @@
           <dt>Biglietto</dt><dd>10 €</dd>
           <dt>Abbonamento</dt><dd>40 € per tutte e cinque le serate, con il tuo posto fisso · <a href="index.html#abbonamento">scopri</a></dd>
         </dl>
+        <div class="tuo-posto scegli-biglietto">
+          <p class="etichetta">Scegli il posto</p>
+          <div class="palco" aria-hidden="true"></div>
+          <div class="posti" data-sala="biglietto" data-spettacolo="la-morte-e-la-fanciulla" role="group" aria-label="Scegli i posti per La morte e la fanciulla"></div>
+          <ul class="legenda" aria-hidden="true">
+            <li><span class="posto"></span>libero</li>
+            <li><span class="posto occupato"></span>occupato</li>
+            <li><span class="posto scelto"></span>i tuoi</li>
+          </ul>
+          <p class="didascalia" aria-live="polite">
+            <strong id="posti-scelti">Scegli i tuoi posti</strong>
+            <span id="posti-conto">Tocca uno o più posti liberi.</span>
+          </p>
+        </div>
         <div class="azioni">
-          <a class="bottone bottone-blu" href="https://wa.me/393351354905?text=Buongiorno%2C%20vorrei%20prenotare%20per%20La%20morte%20e%20la%20fanciulla%2C%20sabato%2027%20febbraio%202027%20alle%2021.%20Numero%20di%20posti%3A%20" target="_blank" rel="noopener">Prenota su WhatsApp</a>
+          <a class="bottone bottone-blu" id="prenota-whatsapp" data-testo="Buongiorno, vorrei prenotare per La morte e la fanciulla, sabato 27 febbraio 2027 alle 21." href="https://wa.me/393351354905?text=Buongiorno%2C%20vorrei%20prenotare%20per%20La%20morte%20e%20la%20fanciulla%2C%20sabato%2027%20febbraio%202027%20alle%2021.%20Numero%20di%20posti%3A%20" target="_blank" rel="noopener">Prenota su WhatsApp</a>
           <a class="bottone bottone-filo" href="tel:+393351354905">Chiama 335 135 4905</a>
         </div>
         <p class="nota"><strong>Regala un posto:</strong> il voucher vale per due ingressi o per l’abbonamento a tutta la stagione.</p>
@@ -126,6 +140,7 @@
   </div>
 </footer>
 
-<script src="sala.js?v=1"></script>
+<script src="posti.js"></script>
+<script src="sala.js?v=2"></script>
 </body>
 </html>

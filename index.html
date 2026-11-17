@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="stile.css?v=1">
+<link rel="stylesheet" href="stile.css?v=2">
 </head>
 <body>
 
@@ -125,10 +125,15 @@
 
       <div class="tuo-posto">
         <div class="palco" aria-hidden="true"></div>
-        <div class="posti" data-sala="scegli" role="group" aria-label="Prova a scegliere un posto"></div>
+        <div class="posti" data-sala="scegli" role="group" aria-label="Scegli il posto dell’abbonamento"></div>
+        <ul class="legenda" aria-hidden="true">
+          <li><span class="posto"></span>libero</li>
+          <li><span class="posto occupato"></span>occupato</li>
+          <li><span class="posto scelto"></span>il tuo</li>
+        </ul>
         <p class="didascalia" aria-live="polite">
           <strong id="posto-scelto">Fila C · posto 7</strong>
-          <span>Tocca un posto: sarà tuo per tutte e cinque le serate.</span>
+          <span id="posto-spiegazione">Tocca un posto libero: sarà tuo per tutte e cinque le serate.</span>
         </p>
       </div>
     </div>
@@ -193,6 +198,7 @@
   </div>
 </footer>
 
-<script src="sala.js?v=1"></script>
+<script src="posti.js"></script>
+<script src="sala.js?v=2"></script>
 </body>
 </html>
