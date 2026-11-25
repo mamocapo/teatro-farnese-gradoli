@@ -51,6 +51,7 @@ const PREZZO_BIGLIETTO = 10;
 const SERATE = {
   'flora-e-li-mariti-sua': '2027-01-16',
   'piccole-donne-non-devono-morire': '2027-02-06',
+  'ero-l-ultima-luce': '2027-02-13',
   'novecento': '2027-02-27',
   'la-tovaglia-di-trilussa': '2027-03-20',
   'bosso-guidolotti': '2027-04-10',

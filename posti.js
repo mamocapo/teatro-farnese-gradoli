@@ -20,6 +20,7 @@ const ABBONAMENTI = [
 const VENDUTI = {
   'flora-e-li-mariti-sua': [],
   'piccole-donne-non-devono-morire': [],
+  'ero-l-ultima-luce': [],
   'novecento': [],
   'la-tovaglia-di-trilussa': [],
   'bosso-guidolotti': [],
