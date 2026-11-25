@@ -22,6 +22,7 @@ const VENDUTI = {
   'piccole-donne-non-devono-morire': [],
   'ero-l-ultima-luce': [],
   'novecento': [],
+  'animal-farm': [],
   'la-tovaglia-di-trilussa': [],
   'bosso-guidolotti': [],
 };

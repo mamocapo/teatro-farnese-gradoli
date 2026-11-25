@@ -53,6 +53,7 @@ const SERATE = {
   'piccole-donne-non-devono-morire': '2027-02-06',
   'ero-l-ultima-luce': '2027-02-13',
   'novecento': '2027-02-27',
+  'animal-farm': '2027-03-13',
   'la-tovaglia-di-trilussa': '2027-03-20',
   'bosso-guidolotti': '2027-04-10',
 };
@@ -159,8 +160,8 @@ if (scegli) {
       etichetta.textContent = nome || 'Scegli il tuo posto';
       if (abbonati) {
         abbonati.href = linkWhatsApp(nome
-          ? `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (50 €). Posto preferito: ${nome}.`
-          : `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (50 €).`);
+          ? `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (60 €). Posto preferito: ${nome}.`
+          : `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (60 €).`);
       }
     },
   });
