@@ -159,8 +159,8 @@ if (scegli) {
       etichetta.textContent = nome || 'Scegli il tuo posto';
       if (abbonati) {
         abbonati.href = linkWhatsApp(nome
-          ? `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (40 €). Posto preferito: ${nome}.`
-          : `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (40 €).`);
+          ? `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (50 €). Posto preferito: ${nome}.`
+          : `Buongiorno, vorrei l'abbonamento a Settantotto · Atto primo (50 €).`);
       }
     },
   });
