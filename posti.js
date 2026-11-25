@@ -18,9 +18,9 @@ const ABBONAMENTI = [
 ];
 
 const VENDUTI = {
+  'flora-e-li-mariti-sua': [],
+  'piccole-donne-non-devono-morire': [],
+  'la-tovaglia-di-trilussa': [],
   'novecento': [],
   'bosso-guidolotti': [],
-  'la-morte-e-la-fanciulla': [],
-  'anguille-di-bolsena': [],
-  'suites-bach': [],
 };

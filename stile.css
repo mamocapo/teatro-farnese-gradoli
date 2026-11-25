@@ -278,8 +278,6 @@ dl.info dd { margin: 0; }
 }
 .apertura-spettacolo .quando-grande small { display: block; margin-top: 6px; font-family: var(--sans); font-size: 15px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; }
 
-/* nella sala di uno spettacolo: posto di stasera pieno, serate già passate solo bordate d'oro */
-.posto.passato { box-shadow: inset 0 0 0 3px var(--oro-chiaro); }
 
 .scheda-spettacolo { display: grid; grid-template-columns: 1.2fr 1fr; gap: 72px; align-items: start; }
 .scheda-spettacolo h2 { margin: 0 0 18px; font-family: var(--serif); font-weight: 500; font-size: 40px; line-height: 1.1; color: var(--blu); }
@@ -299,6 +297,8 @@ dl.info dd { margin: 0; }
 .biglietto dl.info { margin-bottom: 28px; }
 .biglietto .azioni { margin-top: 0; flex-direction: column; align-items: stretch; gap: 10px; }
 .biglietto .nota { margin: 18px 0 0; font-size: 14px; color: var(--peperino); }
+.biglietto .in-arrivo { margin: 0 0 20px; padding-top: 18px; border-top: 1px solid var(--filo); color: var(--peperino); }
+.scheda-spettacolo .testo .crediti { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--filo); font-size: 15px; color: var(--peperino); }
 
 /* Precedente / successivo */
 .altri { border-top: 1px solid var(--filo); }

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cherries · Teatro Farnese di Gradoli</title>
+<meta name="description" content="Un concerto dei Cherries per salutare l’anno nuovo. Domenica 3 gennaio 2027, di pomeriggio, al Teatro Farnese di Gradoli.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stile.css?v=3">
+</head>
+<body>
+
+<div class="avviso">
+  <div class="contenitore">
+    <p style="margin:0"><strong>Sabato 19 dicembre, ore 20</strong> · il teatro apre con Sveva. Ingresso gratuito.</p>
+  </div>
+</div>
+
+<header class="testata">
+  <div class="contenitore">
+    <a class="marchio" href="index.html">Teatro Farnese di Gradoli</a>
+    <nav class="menu" aria-label="Menu principale">
+      <a href="index.html#stagione">Stagione</a>
+      <a href="index.html#abbonamento">Abbonamento</a>
+      <a href="index.html#teatro">Il teatro</a>
+      <a href="index.html#dove">Dove siamo</a>
+    </nav>
+    <a class="bottone bottone-oro" href="#prenota">Biglietti</a>
+  </div>
+</header>
+
+<main>
+  <!-- Apertura dello spettacolo -->
+  <section class="apertura apertura-spettacolo">
+    <div class="contenitore">
+      <div>
+        <p class="etichetta"><a href="index.html#stagione">La stagione</a> · <span class="genere">Evento speciale</span></p>
+        <h1>Cherries</h1>
+        <p class="sottotitolo">in concerto</p>
+        <p class="interpreti">Per salutare l’anno nuovo</p>
+        <p class="quando-grande">Domenica 3 gennaio 2027<small>pomeriggio · evento speciale</small></p>
+        <div class="azioni">
+          <a class="bottone bottone-oro" href="#prenota">Informazioni</a>
+        </div>
+      </div>
+
+      <figure class="sala" aria-label="La sala: 78 posti in sei file da tredici">
+        <div class="palco" aria-hidden="true"></div>
+        <ul class="posti" data-sala="spettacolo" data-acceso="tutti" aria-hidden="true"></ul>
+        <figcaption>Serata speciale: si accende tutta la sala.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Lo spettacolo + biglietti -->
+  <section class="blocco">
+    <div class="contenitore scheda-spettacolo">
+      <div class="testo">
+        <h2>Il concerto</h2>
+        <p>Un concerto pomeridiano dei Cherries, per salutare insieme l’inizio del nuovo anno.</p>
+      </div>
+
+      <aside class="biglietto" id="prenota">
+        <h2>Informazioni</h2>
+        <dl class="info">
+          <dt>Quando</dt><dd>Domenica 3 gennaio 2027, pomeriggio</dd>
+          <dt>Dove</dt><dd>Palazzo Farnese, Gradoli<br>ingresso da via Solferino · <a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Solferino+Gradoli+VT" target="_blank" rel="noopener">mappa</a></dd>
+          <dt>Abbonamento</dt><dd>40 € per tutti e cinque gli spettacoli della stagione, con il tuo posto fisso · <a href="index.html#abbonamento">scopri</a></dd>
+        </dl>
+        <div class="azioni">
+          <a class="bottone bottone-filo" href="tel:+393351354905">Info 335 135 4905</a>
+        </div>
+        <p class="nota"><strong>Regala un posto:</strong> il voucher vale per due ingressi o per l’abbonamento a tutta la stagione.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Spettacolo precedente e successivo -->
+  <nav class="altri" aria-label="Altri spettacoli della stagione">
+    <div class="contenitore">
+      <a href="sveva.html"><small>← 19 dicembre</small><strong>Sveva</strong></a>
+      <a href="flora-e-li-mariti-sua.html"><small>Stagione →</small><strong>Flora e li mariti sua</strong></a>
+    </div>
+  </nav>
+</main>
+
+<footer class="piede">
+  <div class="contenitore">
+    <div class="colonne">
+      <div>
+        <div class="mini" aria-hidden="true">
+          <div class="palco"></div>
+          <ul class="posti" data-sala="piede"></ul>
+        </div>
+        <p class="firma">Settantotto<br><em>Atto primo</em></p>
+      </div>
+      <div>
+        <h3>Contatti</h3>
+        <ul>
+          <li>Palazzo Farnese, Gradoli (VT)</li>
+          <li>Ingresso da via Solferino</li>
+          <li><a href="tel:+393351354905">Info 335 135 4905</a></li>
+          <li>teatrofarnesegradoli.it</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Il sito</h3>
+        <ul>
+          <li><a href="index.html#stagione">La stagione</a></li>
+          <li><a href="index.html#abbonamento">Abbonamento</a></li>
+          <li><a href="index.html#teatro">Il teatro</a></li>
+          <li><a href="index.html#dove">Dove siamo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="crediti">
+      <p>Comune di Gradoli · Cooperativa di Comunità Fermento</p>
+      <p>Stagione 2026/2027</p>
+    </div>
+  </div>
+</footer>
+
+<script src="posti.js"></script>
+<script src="sala.js?v=3"></script>
+</body>
+</html>

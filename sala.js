@@ -6,9 +6,6 @@
 const FILE = 'ABCDEF';
 const ORO = { fila: 2, col: 6 }; // il posto d'oro del logo: fila C, posto 7
 
-// I cinque posti che si accendono, uno per spettacolo (come sulla locandina di stagione)
-const POSTI_STAGIONE = [[2, 6], [4, 2], [1, 10], [5, 8], [0, 3]];
-
 const WHATSAPP = '393351354905';
 
 // --- Sale "decorative": homepage e piede pagina ---
@@ -25,17 +22,17 @@ document.querySelectorAll('[data-sala="apertura"], [data-sala="piede"]').forEach
   }
 });
 
-// --- Sala di uno spettacolo: si accende il posto di quella serata ---
-// data-numero="1".."5": il posto della serata è pieno d'oro, quelli delle serate prima solo bordati.
+// --- Sala di uno spettacolo ---
+// data-acceso="tutti": serata speciale, si accende tutta la sala.
+// data-acceso="C7": spettacolo della stagione, si accende il suo posto (come sulla locandina).
 document.querySelectorAll('[data-sala="spettacolo"]').forEach(sala => {
-  const numero = Number(sala.dataset.numero);
+  const acceso = (sala.dataset.acceso || '').toUpperCase();
+  const m = acceso.match(/^([A-F])(\d{1,2})$/);
   for (let fila = 0; fila < 6; fila++) {
     for (let col = 0; col < 13; col++) {
       const p = document.createElement('li');
       p.className = 'posto';
-      const k = POSTI_STAGIONE.findIndex(([f, c]) => f === fila && c === col);
-      if (k === numero - 1) p.classList.add('oro');
-      else if (k >= 0 && k < numero - 1) p.classList.add('passato');
+      if (acceso === 'TUTTI' || (m && FILE.indexOf(m[1]) === fila && Number(m[2]) - 1 === col)) p.classList.add('oro');
       sala.appendChild(p);
     }
   }
@@ -48,14 +45,15 @@ document.querySelectorAll('[data-sala="spettacolo"]').forEach(sala => {
 
 const PREZZO_BIGLIETTO = 10;
 
-// Le date delle serate: servono a capire quali biglietti venduti
-// bloccano ancora un posto per chi si abbona.
+// Gli spettacoli dell'abbonamento e le loro date (aaaa-mm-gg): servono a capire
+// quali biglietti venduti bloccano ancora un posto per chi si abbona.
+// null = data ancora da fissare: lo spettacolo conta come serata futura.
 const SERATE = {
-  'novecento': '2026-12-20',
-  'bosso-guidolotti': '2027-01-30',
-  'la-morte-e-la-fanciulla': '2027-02-27',
-  'anguille-di-bolsena': '2027-03-27',
-  'suites-bach': '2027-04-24',
+  'flora-e-li-mariti-sua': null,
+  'piccole-donne-non-devono-morire': null,
+  'la-tovaglia-di-trilussa': null,
+  'novecento': null,
+  'bosso-guidolotti': null,
 };
 
 const registroAbbonamenti = typeof ABBONAMENTI !== 'undefined' ? ABBONAMENTI : [];
@@ -89,7 +87,7 @@ const occupatiSerata = spettacolo =>
 const occupatiAbbonamento = () => {
   const occupati = leggiPosti(registroAbbonamenti);
   Object.keys(SERATE).forEach(s => {
-    if (SERATE[s] >= oggi()) leggiPosti(registroVenduti[s]).forEach(p => occupati.add(p));
+    if (!SERATE[s] || SERATE[s] >= oggi()) leggiPosti(registroVenduti[s]).forEach(p => occupati.add(p));
   });
   return occupati;
 };
