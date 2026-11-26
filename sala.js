@@ -49,12 +49,12 @@ const PREZZO_BIGLIETTO = 10;
 // quali biglietti venduti bloccano ancora un posto per chi si abbona.
 // null = data ancora da fissare: lo spettacolo conta come serata futura.
 const SERATE = {
-  'flora-e-li-mariti-sua': '2027-01-16',
-  'piccole-donne-non-devono-morire': '2027-02-06',
+  'la-tovaglia-di-trilussa': '2027-02-07',
   'ero-l-ultima-luce': '2027-02-13',
   'novecento': '2027-02-27',
   'animal-farm': '2027-03-13',
-  'la-tovaglia-di-trilussa': '2027-03-20',
+  'flora-e-li-mariti-sua': '2027-03-21',
+  'piccole-donne-non-devono-morire': '2027-04-03',
   'bosso-guidolotti': '2027-04-10',
 };
 

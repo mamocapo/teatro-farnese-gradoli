@@ -18,11 +18,11 @@ const ABBONAMENTI = [
 ];
 
 const VENDUTI = {
-  'flora-e-li-mariti-sua': [],
-  'piccole-donne-non-devono-morire': [],
+  'la-tovaglia-di-trilussa': [],
   'ero-l-ultima-luce': [],
   'novecento': [],
   'animal-farm': [],
-  'la-tovaglia-di-trilussa': [],
+  'flora-e-li-mariti-sua': [],
+  'piccole-donne-non-devono-morire': [],
   'bosso-guidolotti': [],
 };
